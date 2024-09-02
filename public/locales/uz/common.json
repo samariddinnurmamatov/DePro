@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "company_name": "DePro Kompaniyasi",
+    "it": "IT-Autsorsing Kompaniyasi",
+    "company_desc": "Agar biznesingiz vaqtinchalik bo'lishini, mijozlar ishonchini yo'qotishini istamasangiz, o'z veb-saytingizga ega bo'ling. Bu orqali ular sizni topishlari oson bo'ladi. Siz ishonchli brendga aylanasiz. Mijozlaringiz bilan muloqot yaxshilanadi.",
+    "contact": "Aloqa"
+  },
+  "nav": {
+    "home": "Asosiy",
+    "about": "Biz haqimizda",
+    "clients": "Mijozlar",
+    "services": "Xizmatlar",
+    "tools": "Asboblar",
+    "projects": "Loyihalar",
+    "contact": "Aloqa"
+  },
+  "clients": {
+    "description": "O'zbekistonda va butun dunyo bo'ylab tezkor brendlar va agentliklar tomonidan ishonchli"
+  },
+  "services": {
+    "title": "Bizning Xizmatlarimiz",
+    "items": [
+      "Veb Dasturchi",
+      "React Native Dasturchi",
+      "Backend Dasturchi",
+      "Kontent Yaratuvchi",
+      "Kontent Yaratuvchi",
+      "Kontent Yaratuvchi"
+    ]
+  },
+  "tools": {
+    "title": "Asboblar"
+  },
+  "contact": {
+    "getInTouch": "Aloqa uchun",
+    "contact": "Bog'lanish",
+    "labels": {
+      "name": "Ismingiz",
+      "email": "Elektron pochtangiz",
+      "message": "Xabaringiz"
+    },
+    "placeholders": {
+      "name": "Ismingiz nima?",
+      "email": "Elektron pochtangiz nima?",
+      "message": "Nima demoqchisiz?"
+    },
+    "button": {
+      "sending": "Yuborilyapti...",
+      "sent": "Yuborildi"
+    }
+  }
+}
