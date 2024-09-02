@@ -25,7 +25,7 @@ const ContactSection = () => {
     };
 
     return (
-        <div className="mt-36 py-20 relative" id="contact-section">
+        <div className="pt-40 py-24 relative" id="contact-section">
             {/* <CustomContainer>
                 <div className="flex items-center justify-between gap-10 overflow-hidden">
                     <div className="flex flex-col w-full bg-black-100 p-8 rounded-2xl">
@@ -91,16 +91,16 @@ const ContactSection = () => {
             </CustomContainer>
             <StarsCanvas /> */}
             <CustomContainer>
-            <div className="flex justify-between gap-10 overflow-hidden">
+            <div className="flex justify-between gap-14 overflow-hidden">
                     <div className='w-full flex flex-col gap-12'>
                       <h1 className='font-bold text-[35px]'>Position your company for digital leadership</h1>
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repellat aut hic, quidem modi accusantium itaque molestiae quis distinctio voluptates tempore odio quibusdam sit alias dolorem libero consequatur incidunt voluptatem.</p>
                     </div>
-                    <div className="flex flex-col w-full bg-black-100 p-8 rounded-2xl">
+                    <div className="flex flex-col w-full bg-[#15193a] p-8 rounded-2xl">
 
                         <form
                             ref={formRef}
-                            className="mt-12 flex flex-col gap-9"
+                            className="flex flex-col gap-9"
                         >
                             <label className="flex flex-col">
                                 <span className="text-white font-medium mb-4">
@@ -112,7 +112,7 @@ const ContactSection = () => {
                                     value={form.name}
                                     onChange={handleChange}
                                     placeholder={t('contact.placeholders.name')}
-                                    className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white outline-none border-none font-medium"
+                                    className="bg-transparent border border-gray-50 rounded-lg py-4 px-6 placeholder:text-secondary text-white outline-none font-medium"
                                 />
                             </label>
                             <label className="flex flex-col">
@@ -125,7 +125,7 @@ const ContactSection = () => {
                                     value={form.email}
                                     onChange={handleChange}
                                     placeholder={t('contact.placeholders.email')}
-                                    className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white outline-none border-none font-medium"
+                                    className="bg-transparent border border-gray-50 rounded-lg py-4 px-6 placeholder:text-secondary text-white outline-none font-medium"
                                 />
                             </label>
                             <label className="flex flex-col">
@@ -138,10 +138,10 @@ const ContactSection = () => {
                                     value={form.tel}
                                     onChange={handleChange}
                                     placeholder={t('contact.placeholders.tel')}
-                                    className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white outline-none border-none font-medium"
+                                    className="bg-transparent border border-gray-50 rounded-lg py-4 px-6 placeholder:text-secondary text-white outline-none font-medium"
                                 />
                             </label>
-                            <button className="bg-[#2f3fe7] rounded-[12px] text-[#fff] text-[16px] font-bold py-5 px-20">
+                            <button className="bg-[#2f3fe7] rounded-[12px] max-w-60 text-[#fff] text-[16px] font-bold py-5 px-20">
                                 {loading ? t('contact.button.sending') : t('contact.button.sent')}
                             </button>
                         </form>

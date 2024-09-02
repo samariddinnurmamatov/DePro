@@ -37,12 +37,12 @@
     "labels": {
       "name": "Ismingiz",
       "email": "Elektron pochtangiz",
-      "message": "Xabaringiz"
+      "message": "Telefon raqamingiz"
     },
     "placeholders": {
       "name": "Ismingiz nima?",
       "email": "Elektron pochtangiz nima?",
-      "message": "Nima demoqchisiz?"
+      "tel": "Telefon raqamingiz kiriting"
     },
     "button": {
       "sending": "Yuborilyapti...",

@@ -58,10 +58,10 @@ const MainHeader = () => {
   return (
     <header className="sticky top-0  py-4 px-4 bg-[#121637] z-50" style={{ borderBottom: "1px solid #191d3e", width: "100%", fontWeight: "500", fontSize: "15px"}}> 
       <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
-        <div className="flex items-center gap-3">
+        <Link href={"/"} className="flex items-center gap-3">
           <Image src={Logo3} width={25} height={25} alt="logo" />
-          <Link href={"/"}>DePro</Link>
-        </div>
+          <span>DePro</span>
+        </Link>
 
         <div className="h-full flex flex-row items-center justify-between">
           <div className="flex items-center gap-10 justify-between w-full h-auto border border-[#7042f88b] mr-[15px] px-10 py-[10px] rounded-full text-gray-200">
