@@ -85,45 +85,47 @@ const FooterQuickLinkGroup: FC<LinksGroup> = ({ title, links }) => (
 
 const Footer: FC = () => {
   return (
-    <footer className="bg-[#121637] text-white pt-20">
+    <footer className="bg-[#121637] text-white pt-20 px-5">
       <CustomContainer>
-        <div className="flex gap-2 justify-between flex-wrap">
-          {/* Logo and Description */}
-          <div className="w-full md:w-2/6 lg:w-2/6 mb-12 md:mb-0 px-3">
-            <h1 className="mb-6 font-bold">DePro</h1>
-            <p className="mb-8" style={{ color: "rgb(156 163 175)" }}>
-              About DePro Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus unde reprehenderit minima laboriosam corporis porro repellendus quos! Dolor laudantium tenetur exercitationem id mollitia, blanditiis assumenda eius. Molestias cum architecto ex?
-            </p>
-            <ul className="flex items-center">
-              {socialLinks.map((social, index) => (
-                <li key={index} className="mr-3">
-                  <a
-                    href={social.link}
-                    className="w-11 h-11 flex items-center justify-center bg-blue-500 bg-opacity-50 text-white rounded-full transition duration-300 hover:bg-blue-500"
-                  >
-                    {social.icon}
-                  </a>
-                </li>
-              ))}
-            </ul>
+        <div className="px-2">
+          <div className="flex gap-2 justify-between flex-wrap">
+            {/* Logo and Description */}
+            <div className="w-full md:w-2/6 lg:w-2/6 mb-12 md:mb-0">
+              <h1 className="mb-6 font-bold">DePro</h1>
+              <p className="mb-8" style={{ color: "rgb(156 163 175)" }}>
+                About DePro Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus unde reprehenderit minima laboriosam corporis porro repellendus quos! Dolor laudantium tenetur exercitationem id mollitia, blanditiis assumenda eius. Molestias cum architecto ex?
+              </p>
+              <ul className="flex items-center">
+                {socialLinks.map((social, index) => (
+                  <li key={index} className="mr-3">
+                    <a
+                      href={social.link}
+                      className="w-11 h-11 flex items-center justify-center bg-blue-500 bg-opacity-50 text-white rounded-full transition duration-300 hover:bg-blue-500"
+                    >
+                      {social.icon}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Quick Links */}
+            <FooterQuickLinkGroup {...quickLinks} />
+
+            {/* Services */}
+            <FooterLinkGroup {...servicesLinks} />
+
+            <FooterContactGroup {...contactLinks} />
           </div>
 
-          {/* Quick Links */}
-          <FooterQuickLinkGroup {...quickLinks} />
-
-          {/* Services */}
-          <FooterLinkGroup {...servicesLinks} />
-
-          <FooterContactGroup {...contactLinks} />
+        
+          <div className="mt-10 border-t border-gray-300 py-6 text-center">
+            <p className="text-gray-500">
+              © Barcha huquqlar himoyalangan 2024 - DePro ®
+            </p>
+          </div>
         </div>
-
-        {/* Copyright Section */}
-        <div className="mt-10 border-t border-gray-300 py-6 text-center">
-          <p className="text-gray-500">
-            © Barcha huquqlar himoyalangan 2024 - DePro ®
-          </p>
-        </div>
-      </CustomContainer>
+        </CustomContainer>
     </footer>
   );
 };

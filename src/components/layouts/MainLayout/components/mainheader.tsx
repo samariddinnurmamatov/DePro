@@ -8,6 +8,7 @@ import CustomDropdown from "@/components/ui/Select/Select";
 import Logo from "@/assets/2.svg"
 import Logo3 from "@/assets/1.svg"
 import Image from "next/image";
+import CustomContainer from "@/components/ui/Container";
 
 const language = {
   en: "English",
@@ -56,8 +57,9 @@ const MainHeader = () => {
   };
 
   return (
-    <header className="sticky top-0  py-4 px-4 bg-[#121637] z-50" style={{ borderBottom: "1px solid #191d3e", width: "100%", fontWeight: "500", fontSize: "15px"}}> 
-      <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
+    <header className="sticky top-0 py-4 px-3 bg-[#121637] z-50" style={{ borderBottom: "1px solid #191d3e", width: "100%", fontWeight: "500", fontSize: "15px"}}> 
+    <CustomContainer>
+      <div className="w-full h-full flex flex-row items-center justify-between">
         <Link href={"/"} className="flex items-center gap-3">
           <Image src={Logo3} width={25} height={25} alt="logo" />
           <span>DePro</span>
@@ -94,6 +96,8 @@ const MainHeader = () => {
             </button>
         </div>
       </div>
+
+    </CustomContainer>
     </header>
   );
 };

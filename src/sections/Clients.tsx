@@ -49,7 +49,7 @@ const ClientsSection: React.FC<ClientsSectionProps> = ({ clientsItems }) => {
   }, [instanceRef]);
 
   return (
-    <div className="pt-40 text-center" id="clients-section">
+    <div className="pt-40 text-center px-2" id="clients-section">
       <CustomContainer>
         <div ref={sliderRef} className="keen-slider">
           {clientsItems.map((item) => (

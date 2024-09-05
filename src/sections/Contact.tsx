@@ -25,7 +25,7 @@ const ContactSection = () => {
     };
 
     return (
-        <div className="pt-40 py-24 relative" id="contact-section">
+        <div className="pt-40 py-24 px-5 relative" id="contact-section">
             {/* <CustomContainer>
                 <div className="flex items-center justify-between gap-10 overflow-hidden">
                     <div className="flex flex-col w-full bg-black-100 p-8 rounded-2xl">
@@ -133,7 +133,7 @@ const ContactSection = () => {
                                     {t('contact.labels.message')}
                                 </span>
                                 <input
-                                    type="number"
+                                    type="text"
                                     name="tel"
                                     value={form.tel}
                                     onChange={handleChange}
