@@ -15,11 +15,11 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ servicesItems }) => {
   const { t } = useTranslation('common');
 
   return (
-    <div className="pt-20 px-5" id="services-section">
+    <div className="pt-20 px-5 max-[600px]:px-2" id="services-section">
         <CustomContainer>
             <div className='px-3'>
-                <h1 className='py-9 text-[34px] font-bold'>{t('services.title')}</h1>
-                <div className='grid grid-cols-3 gap-6 py-4'>
+                <h1 className='py-9 text-[34px] max-[550px]:text-[25px] max-[700px]:text-center font-bold'>{t('services.title')}</h1>
+                <div className='grid grid-cols-3 gap-6 py-4 max-[860px]:grid-cols-2 max-[650px]:grid-cols-1'>
                     {servicesItems.map((item) => (
                         <Tilt
                             key={item.id}

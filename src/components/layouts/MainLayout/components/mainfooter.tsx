@@ -88,9 +88,9 @@ const Footer: FC = () => {
     <footer className="bg-[#121637] text-white pt-20 px-5">
       <CustomContainer>
         <div className="px-2">
-          <div className="flex gap-2 justify-between flex-wrap">
+          <div className="flex gap-x-5 gap-y-10 justify-between flex-wrap">
             {/* Logo and Description */}
-            <div className="w-full md:w-2/6 lg:w-2/6 mb-12 md:mb-0">
+            <div className="w-full md:w-2/7 lg:w-2/5 mb-12 md:mb-0">
               <h1 className="mb-6 font-bold">DePro</h1>
               <p className="mb-8" style={{ color: "rgb(156 163 175)" }}>
                 About DePro Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus unde reprehenderit minima laboriosam corporis porro repellendus quos! Dolor laudantium tenetur exercitationem id mollitia, blanditiis assumenda eius. Molestias cum architecto ex?
@@ -120,7 +120,7 @@ const Footer: FC = () => {
 
         
           <div className="mt-10 border-t border-gray-300 py-6 text-center">
-            <p className="text-gray-500">
+            <p className="text-gray-500 max-[400px]:text-[13px]">
               © Barcha huquqlar himoyalangan 2024 - DePro ®
             </p>
           </div>

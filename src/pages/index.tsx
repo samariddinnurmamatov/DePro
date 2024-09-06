@@ -4,7 +4,7 @@ import Udevs from '@/assets/udevs.svg';
 import Najot from '@/assets/najot-talim.svg';
 import ReactImg from '@/assets/react.svg'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-// import ProjectsSlider from "@/sections/Project";
+import ProjectsSlider from "@/sections/Project";
 
 const HeroSection = dynamic(() => import('@/sections/Hero'));
 const ClientsSection = dynamic(() => import('@/sections/Clients'));
@@ -21,9 +21,9 @@ const Home = ({ data }: { data: any }) => {
 
       <ServicesSection servicesItems={data.servicesItems} />
       
-      <ToolsSection categoriesItems={data.categoriesItems} />
+      {/* <ToolsSection categoriesItems={data.categoriesItems} /> */}
       
-      {/* <ProjectsSlider /> */}
+      <ProjectsSlider />
 
       <ContactSection />
     </main>

@@ -25,7 +25,7 @@ const ContactSection = () => {
     };
 
     return (
-        <div className="pt-40 py-24 px-5 relative" id="contact-section">
+        <div className="pt-40 py-24 px-5 max-[600px]:px-2 relative" id="contact-section">
             {/* <CustomContainer>
                 <div className="flex items-center justify-between gap-10 overflow-hidden">
                     <div className="flex flex-col w-full bg-black-100 p-8 rounded-2xl">
@@ -91,12 +91,12 @@ const ContactSection = () => {
             </CustomContainer>
             <StarsCanvas /> */}
             <CustomContainer>
-            <div className="flex justify-between gap-14 overflow-hidden">
-                    <div className='w-full flex flex-col gap-12'>
-                      <h1 className='font-bold text-[35px]'>Position your company for digital leadership</h1>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repellat aut hic, quidem modi accusantium itaque molestiae quis distinctio voluptates tempore odio quibusdam sit alias dolorem libero consequatur incidunt voluptatem.</p>
+            <div className="flex justify-between max-[830px]:flex-col gap-14 overflow-hidden px-4">
+                    <div className='w-full flex flex-col max-[700px]:text-center gap-12'>
+                      <h1 className='font-bold text-[35px] max-[440px]:text-[20px]'>Position your company for digital leadership</h1>
+                      <p className="max-[440px]:text-[14px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repellat aut hic, quidem modi accusantium itaque molestiae quis distinctio voluptates tempore odio quibusdam sit alias dolorem libero consequatur incidunt voluptatem.</p>
                     </div>
-                    <div className="flex flex-col w-full bg-[#15193a] p-8 rounded-2xl">
+                    <div className="flex flex-col w-full bg-[#15193a] p-8 max-[600px]:p-5 rounded-2xl">
 
                         <form
                             ref={formRef}
@@ -141,7 +141,7 @@ const ContactSection = () => {
                                     className="bg-transparent border border-gray-50 rounded-lg py-4 px-6 placeholder:text-secondary text-white outline-none font-medium"
                                 />
                             </label>
-                            <button className="bg-[#2f3fe7] rounded-[12px] max-w-60 text-[#fff] text-[16px] font-bold py-5 px-20">
+                            <button className="bg-[#2f3fe7] rounded-[12px] max-w-55 text-[#fff] text-[16px] font-bold py-5 px-20">
                                 {loading ? t('contact.button.sending') : t('contact.button.sent')}
                             </button>
                         </form>
