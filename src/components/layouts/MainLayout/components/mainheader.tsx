@@ -65,7 +65,7 @@ const MainHeader = () => {
     >
       <CustomContainer>
         <div className="w-full h-full flex items-center justify-between">
-          <Link href={"/"} className="flex items-center gap-3">
+          <Link href={"/"} className="flex items-center gap-3" aria-label="Home Page">
             <Image src={Logo3} width={25} height={25} alt="logo" loading="lazy" />
             <span>DePro</span>
           </Link>
@@ -95,6 +95,7 @@ const MainHeader = () => {
             />
             <button
               onClick={handleScrollToContact}
+              aria-label={t("nav.contact")}
               className="bg-[#2f3fe7] rounded-[7px] text-[#fff] text-[14px] font-bold py-2 px-4 hidden min-[1000px]:block"
             >
               {t("nav.contact")}
@@ -104,6 +105,7 @@ const MainHeader = () => {
             <button
               className="min-[1000px]:hidden text-gray-200"
               onClick={() => setMenuOpen(!menuOpen)}
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
             >
               <svg
                 className="w-6 h-6"
@@ -128,6 +130,9 @@ const MainHeader = () => {
             <div
               className="fixed inset-0 bg-black bg-opacity-50 z-40"
               onClick={closeMenu}
+              aria-label="Close menu overlay"
+              role="button"
+              tabIndex={0}
             ></div>
             <div
               className={`fixed top-0 right-0 h-full w-[250px] bg-[#121637] text-white transition-transform duration-300 ease-in-out transform ${
@@ -139,6 +144,7 @@ const MainHeader = () => {
                 <button
                   className="self-end text-gray-200"
                   onClick={closeMenu}
+                  aria-label="Close menu"
                 >
                   <svg
                     className="w-6 h-6"
@@ -155,13 +161,13 @@ const MainHeader = () => {
                     />
                   </svg>
                 </button>
-                <Link href={"#home-section"} onClick={closeMenu}>
+                <Link href={"#home-section"} onClick={closeMenu} aria-label="Navigate to Home Section">
                   {t("nav.home")}
                 </Link>
-                <Link href={"#services-section"} onClick={closeMenu}>
+                <Link href={"#services-section"} onClick={closeMenu} aria-label="Navigate to Services Section">
                   {t("nav.services")}
                 </Link>
-                <Link href={"#tools-section"} onClick={closeMenu}>
+                <Link href={"#tools-section"} onClick={closeMenu} aria-label="Navigate to Tools Section">
                   {t("nav.tools")}
                 </Link>
                 <button
@@ -170,6 +176,7 @@ const MainHeader = () => {
                     handleScrollToContact();
                   }}
                   className="bg-[#2f3fe7] rounded-[7px] text-[#fff] text-[14px] font-bold py-2 px-4 w-full text-center"
+                  aria-label={t("nav.contact")}
                 >
                   {t("nav.contact")}
                 </button>
