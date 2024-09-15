@@ -9,7 +9,7 @@ module.exports = {
     defaultLocale: "en",
     localePath: path.resolve("./public/locales"),
   },
-  productionBrowserSourceMaps: false,
+  productionBrowserSourceMaps: true,
   reactStrictMode: false,
   swcMinify: true,
   ns: ["common", "not-found", "internal-server-error"],
