@@ -91,7 +91,7 @@ const ToolsSection: FC<ToolsSectionProps> = ({ categoriesItems }) => {
                 key={tool.name}
                 className="flex flex-col items-center border rounded-lg p-4"
               >
-                <Image src={tool.imgSrc} alt={tool.name} width={60} height={60} loading="lazy" />
+                <Image src={tool.imgSrc} alt={tool.name} width={60} height={60} layout="fixed" loading="lazy" />
                 <span className="mt-2 text-md">{tool.name}</span>
               </div>
             ))}

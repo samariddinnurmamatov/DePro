@@ -9,7 +9,7 @@ interface CardProps {
 const CustomCard = ({ imageSrc, title, price }: CardProps) => {
   return (
     <div className='card' style={{ width: "100%" }}>
-      <Image src={imageSrc} alt={title} width={100} height={100} style={{ width: "100%" }} loading="lazy" />
+      <Image src={imageSrc} alt={title} width={100} height={100} style={{ width: "100%" }} layout="fixed" loading="lazy" />
       <div className='flex justify-between p-2'>
         <div className='flex flex-col gap-2'>
           <h3>{title}</h3>

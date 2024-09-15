@@ -67,7 +67,7 @@ const MainHeader = () => {
       <CustomContainer>
         <div className="w-full h-full flex items-center justify-between">
           <Link href={"/"} className="flex items-center gap-3" aria-label="Home Page">
-            <Image src={Logo3} width={25} height={25} alt="logo" loading="lazy" />
+            <Image src={Logo3} width={25} height={25} alt="logo" layout="fixed" loading="lazy" />
             <span>DePro</span>
           </Link>
 
