@@ -33,9 +33,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ servicesItems }) => {
                                         src={item.icon}
                                         alt={item.title}
                                         layout="fixed"
-                                        width={40}
-                                        height={40}
-                                        className="object-contain"
+                                        className="object-contain w-10 h-10"
                                         loading="lazy"
                                     />
                                 </div>
