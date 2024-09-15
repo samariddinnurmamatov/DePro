@@ -12,9 +12,9 @@ const StarBackground = (props: any) => {
   // Spheres positions generation
   const [sphere] = useState(() => {
     const positions = [];
-    for (let i = 0; i < 5000; i++) {
+    for (let i = 0; i < 3000; i++) {
       const theta = Math.random() * 2 * Math.PI; // 0 to 2*PI for full rotation
-      const phi = Math.acos(2 * Math.random() - 1); // correct range for phi
+      const phi = Math.acos(9 * Math.random() - 1); // correct range for phi
 
       const x = Math.sin(phi) * Math.cos(theta);
       const y = Math.sin(phi) * Math.sin(theta);
