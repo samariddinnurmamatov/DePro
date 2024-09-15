@@ -2,8 +2,10 @@ import React, { useRef, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { safer } from '@/utils/safer';
 import CustomContainer from '@/components/ui/Container';
-import StarsCanvas from '@/components/canvas/StarsCanvas';
-import GridGlobe from '@/components/canvas/GridGlobe';
+import { toast } from 'react-toastify';
+
+const TELEGRAM_BOT_TOKEN = '7434955693:AAFKUX3LUcVB7NagJDxW35ShJ_eSfmlCnMs';
+const CHAT_ID = '-1002365682139';
 
 const ContactSection = () => {
     const formRef = useRef<HTMLFormElement>(null);
@@ -14,6 +16,12 @@ const ContactSection = () => {
         message: "",
     });
     const [loading, setLoading] = useState(false);
+    const [errors, setErrors] = useState({
+        name: false,
+        email: false,
+        tel: false,
+        message: false,
+    });
     const { t } = useTranslation('common');
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -22,127 +30,147 @@ const ContactSection = () => {
             ...form,
             [name]: value,
         });
+        setErrors({
+            ...errors,
+            [name]: false,
+        });
+    };
+
+    const validateForm = () => {
+        const newErrors = {
+            name: form.name.trim() === "",
+            email: form.email.trim() === "",
+            tel: form.tel.trim() === "",
+            message: form.message.trim() === "",
+        };
+
+        setErrors(newErrors);
+
+        return !Object.values(newErrors).includes(true);
+    };
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        if (!validateForm()) {
+            toast.error('Iltimos, barcha maydonlarni to\'ldiring.');
+            return;
+        }
+
+        setLoading(true);
+
+        try {
+            const message = `
+                *New Contact Form Submission*\n*Name:* ${form.name.trim()}\n*Email:* ${form.email.trim()}\n*Phone:* ${form.tel.trim()}\n*Message:* ${form.message.trim()}
+            `;
+            const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: CHAT_ID,
+                    text: message,
+                    parse_mode: 'Markdown',
+                }),
+            });
+
+            if (response.ok) {
+                toast.success('Xabar yuborildi!');
+                setForm({
+                    name: "",
+                    email: "",
+                    tel: "",
+                    message: "",
+                });
+            } else {
+                toast.error('Xabarni yuborish muvaffaqiyatsiz tugadi.');
+            }
+        } catch (error) {
+            console.error('Xabar yuborishda xatolik:', error);
+            toast.error('Xatolik yuz berdi.');
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
         <div className="pt-40 py-24 px-5 max-[600px]:px-2 relative" id="contact-section">
-            {/* <CustomContainer>
-                <div className="flex items-center justify-between gap-10 overflow-hidden">
-                    <div className="flex flex-col w-full bg-black-100 p-8 rounded-2xl">
-                        <p className='sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider'>
-                            {t('contact.getInTouch')}
-                        </p>
-                        <h3 className='text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]'>
-                            {t('contact.contact')}
-                        </h3>
-
-                        <form
-                            ref={formRef}
-                            className="mt-12 flex flex-col gap-9"
-                        >
-                            <label className="flex flex-col">
-                                <span className="text-white font-medium mb-4">
-                                    {t('contact.labels.name')}
-                                </span>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    value={form.name}
-                                    onChange={handleChange}
-                                    placeholder={t('contact.placeholders.name')}
-                                    className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white outline-none border-none font-medium"
-                                />
-                            </label>
-                            <label className="flex flex-col">
-                                <span className="text-white font-medium mb-4">
-                                    {t('contact.labels.email')}
-                                </span>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    value={form.email}
-                                    onChange={handleChange}
-                                    placeholder={t('contact.placeholders.email')}
-                                    className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white outline-none border-none font-medium"
-                                />
-                            </label>
-                            <label className="flex flex-col">
-                                <span className="text-white font-medium mb-4">
-                                    {t('contact.labels.message')}
-                                </span>
-                                <input
-                                    type="number"
-                                    name="tel"
-                                    value={form.tel}
-                                    onChange={handleChange}
-                                    placeholder={t('contact.placeholders.tel')}
-                                    className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white outline-none border-none font-medium"
-                                />
-                            </label>
-                            <button className="bg-[#2f3fe7] rounded-[12px] text-[#fff] text-[16px] font-bold py-5 px-20">
-                                {loading ? t('contact.button.sending') : t('contact.button.sent')}
-                            </button>
-                        </form>
-                    </div>
-                    <div className='w-full'>
-                      <GridGlobe />
-                    </div>
-                </div>
-            </CustomContainer>
-            <StarsCanvas /> */}
             <CustomContainer>
-            <div className="flex justify-between max-[830px]:flex-col gap-14 overflow-hidden px-4">
+                <div className="flex justify-between max-[830px]:flex-col gap-14 overflow-hidden px-4">
                     <div className='w-full flex flex-col max-[700px]:text-center gap-12'>
-                      <h1 className='font-bold text-[35px] max-[440px]:text-[20px]'>Position your company for digital leadership</h1>
-                      <p className="max-[440px]:text-[14px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repellat aut hic, quidem modi accusantium itaque molestiae quis distinctio voluptates tempore odio quibusdam sit alias dolorem libero consequatur incidunt voluptatem.</p>
+                        <h1 className='font-bold text-[45px] max-[440px]:text-[30px]'>Contact Us</h1>
+                        <p className="max-[440px]:text-[14px]">Got a project in mind or need expert support to boost your business?<br /> We’re here to help!
+                            <br /><br />
+                            Whether it’s software development, customer support, data entry, or any other outsourcing need, our skilled team is ready to deliver customized solutions tailored to your specific goals.
+                            <br /><br />
+                            Let’s connect! Fill out the form below, and we’ll get back to you soon. You can also contact us directly via email or phone. We’re excited to work with you and help transform your challenges into success!</p>
+                        <div>
+                            <p><span>Phone: </span> +998(90)-009-99-16</p>
+                            <p><span>Telegram: </span> <a href="https://t.me/husniddin_nurmamatov">@husniddin_nurmamatov</a></p>
+                        </div>
                     </div>
                     <div className="flex flex-col w-full bg-[#15193a] p-8 max-[600px]:p-5 rounded-2xl">
-
                         <form
                             ref={formRef}
+                            onSubmit={handleSubmit}
                             className="flex flex-col gap-9"
                         >
-                            <label className="flex flex-col">
-                                <span className="text-white font-medium mb-4">
-                                    {t('contact.labels.name')}
-                                </span>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    value={form.name}
-                                    onChange={handleChange}
-                                    placeholder={t('contact.placeholders.name')}
-                                    className="bg-transparent border border-gray-50 rounded-lg py-4 px-6 placeholder:text-secondary text-white outline-none font-medium"
+                            <div className='input-field'>
+                                <input 
+                                    type="text" 
+                                    name="name" 
+                                    value={form.name} 
+                                    onChange={handleChange} 
+                                    required 
+                                    spellCheck="false" 
+                                    placeholder=" "
+                                    className={`${errors.name ? 'border-red-500' : 'border-gray-50'}`} />
+                                <label>{t('contact.labels.name')}</label>
+                            </div>
+
+                            <div className='input-field'>
+                                <input 
+                                    type="email" 
+                                    name="email" 
+                                    value={form.email} 
+                                    onChange={handleChange} 
+                                    required 
+                                    spellCheck="false" 
+                                    placeholder=" "
+                                    className={`${errors.email ? 'border-red-500' : 'border-gray-50'}`} />
+                                <label>{t('contact.labels.email')}</label>
+                            </div>
+
+                            <div className='input-field'>
+                                <input 
+                                    type="text" 
+                                    name="tel" 
+                                    value={form.tel} 
+                                    onChange={handleChange} 
+                                    required 
+                                    spellCheck="false" 
+                                    placeholder=" "
+                                    className={`${errors.tel ? 'border-red-500' : 'border-gray-50'}`} />
+                                <label>{t('contact.labels.tel')}</label>
+                            </div>
+
+                            <div className="input-field">
+                                <textarea
+                                    name="message"
+                                    value={form.message} 
+                                    onChange={handleChange} 
+                                    required 
+                                    spellCheck="false" 
+                                    placeholder=" "
+                                    className={`${errors.message ? 'border-red-500' : 'border-gray-50'} h-40`}
                                 />
-                            </label>
-                            <label className="flex flex-col">
-                                <span className="text-white font-medium mb-4">
-                                    {t('contact.labels.email')}
-                                </span>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    value={form.email}
-                                    onChange={handleChange}
-                                    placeholder={t('contact.placeholders.email')}
-                                    className="bg-transparent border border-gray-50 rounded-lg py-4 px-6 placeholder:text-secondary text-white outline-none font-medium"
-                                />
-                            </label>
-                            <label className="flex flex-col">
-                                <span className="text-white font-medium mb-4">
-                                    {t('contact.labels.message')}
-                                </span>
-                                <input
-                                    type="text"
-                                    name="tel"
-                                    value={form.tel}
-                                    onChange={handleChange}
-                                    placeholder={t('contact.placeholders.tel')}
-                                    className="bg-transparent border border-gray-50 rounded-lg py-4 px-6 placeholder:text-secondary text-white outline-none font-medium"
-                                />
-                            </label>
-                            <button className="bg-[#2f3fe7] rounded-[12px] max-w-55 text-[#fff] text-[16px] font-bold py-5 px-20">
-                                {loading ? t('contact.button.sending') : t('contact.button.sent')}
+                                <label>{t('contact.labels.comment')}</label>
+                            </div>
+
+                            <button type='submit' className="bg-[#2f3fe7] rounded-[12px] max-w-55 text-[#fff] text-[16px] font-bold py-5 px-20">
+                                {loading ? 'Sending...' : 'Send Message'}
                             </button>
                         </form>
                     </div>

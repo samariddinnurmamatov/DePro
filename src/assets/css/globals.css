@@ -166,3 +166,39 @@ body{
   max-width: 100% !important;
 }
 
+.input-field{
+  position: relative;
+}
+
+.input-field input, .input-field textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.585);
+  border-radius: 8px;
+  outline: none;
+  background: transparent;
+  color: #ffffffcf;
+}
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  transform: translateY(-50%);
+  color: #ffffffcf;
+  pointer-events: none;
+  transition: .3s;
+}
+
+.input-field input:focus, .input-field textarea:focus {
+  border: 2px solid rgb(47 63 231);
+}
+
+.input-field input:focus ~ label, 
+.input-field input:valid ~ label,
+.input-field textarea:focus ~ label, 
+.input-field textarea:valid ~ label {
+  top: 0;
+  padding: 0 5px;
+  background: rgb(21 25 58);
+}

@@ -1,8 +1,8 @@
 {
   "hero": {
     "company_name": "DePro Company",
-    "it": "IT-Outsourcing Company",
-    "company_desc": "Have your own website if you don’t want your business to be temporary, losing customer confidence. It will be easy for them to find you through it. You will become a reliable brand. Communication with your customers will improve.",
+    "it": "DePro IT-Outsourcing Company",
+    "company_desc": "Empowering businesses with top-tier outsourcing in IT, customer support, software development, and more. Our expert team delivers seamless integration, cost efficiency, and high-quality service, enabling you to focus on driving growth and success.",
     "contact": "Contact"
   },
   "nav": {
@@ -15,38 +15,45 @@
     "contact": "Contact"
   },
   "clients": {
-    "description": "Trusted by fast-moving brands and agencies in Uzbekistan and worldwide"
+    "description": "Our Clients"
   },
   "services": {
     "title": "Our Services",
     "items": [
-      "Web Developer",
-      "React Native Developer",
-      "Backend Developer",
-      "Content Creator",
-      "Content Creator",
-      "Content Creator"
+      "Software Development",
+      "Web Development",
+      "Mobile Application Development",
+      "ERP Systems Development and Implementation",
+      "IT Consulting",
+      "Maintenance and Support"
     ]
   },
   "tools": {
-    "title": "Tools"
+    "title": "Tools",
+    "all": "All",
+    "showMore": "Show More"
   },
   "contact": {
     "getInTouch": "Get in touch",
     "contact": "Contact",
     "labels": {
-      "name": "Your Name",
-      "email": "Your Email",
-      "message": "Your phone number"
+      "name": "Name",
+      "email": "Email",
+      "tel": "Phone number",
+      "comment": "Comment"
     },
     "placeholders": {
       "name": "What's your name?",
       "email": "What's your email?",
-      "tel": "Enter your phone number"
+      "tel": "Enter your phone number",
+      "comment": "Enter your comment"
     },
     "button": {
       "sending": "Sending...",
       "sent": "Sent"
     }
+  },
+  "footer": {
+    "protected": "© All rights reserved 2024 - DePro ®"
   }
 }

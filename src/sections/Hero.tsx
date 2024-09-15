@@ -1,28 +1,26 @@
 import React from 'react';
-import CustomSection from '../components/ui/Section';
+import HomePageImage from '@/assets/svg/HomePageImage.svg'
 import { safer } from '@/utils/safer';
 import StarsCanvas from '@/components/canvas/StarsCanvas';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import CustomContainer from '@/components/ui/Container';
 
+const handleScrollToContact = () => {
+  const contactSection = document.getElementById("contact-section");
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 const HeroSection: React.FC = () => {
   const { t } = useTranslation('common');
 
-  const handleScrollToContact = () => {
-    const contactSection = document.getElementById("contact-section");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
   return (
-    <div className="relative h-[auto] py-24 px-6 max-[600px]:px-2" id="home-section">
+    <div className="relative h-[auto] py-24 px-6 max-[600px]:px-2" id="home-section" aria-labelledby="hero-section-title">
       <CustomContainer>
         <div className='flex gap-5 items-center justify-between px-3 max-[800px]:flex-col max-[800px]:gap-y-10 max-[800px]:items-start'>
           <div className='flex flex-col gap-4 items-start'>
-            <h1 className="text-[30px] max-[1000px]:text-[20px] py-[10px] px-[15px] rounded-md border border-[#7042f88b] opacity-[0.9] inline-block font-bold">
-              {t('hero.company_name')}
-            </h1>
             <div>
               <h2 className='text-[40px] max-[1000px]:text-[30px] max-[400px]:text-[20px]'>
                 {t('hero.it').split(' ').map((word: string, index: number) => (
@@ -41,7 +39,7 @@ const HeroSection: React.FC = () => {
             </button>
           </div>
           <div>
-            <Image src={"https://space-portolio.vercel.app/mainIconsdark.svg"} width={600} height={100} alt='Right-Image'/>
+            <Image src={HomePageImage} width={600} height={100} alt='Right-Image' loading="lazy"/>
           </div>
         </div>
       </CustomContainer>

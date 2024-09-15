@@ -5,7 +5,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 const lang = {
   ru: "uz-Cyrl-Ru",
   uz: "uz-Latn-UZ",
-  en: "ru-En",
+  en: "en-En",
 };
 
 export default class CustomDocument extends Document {
@@ -16,7 +16,7 @@ export default class CustomDocument extends Document {
          
         </Head>
 
-        <body className=" bg-[#030728] text-white">
+        <body className="bg-[#030728] text-white">
           <Main />
           <NextScript />
         </body>

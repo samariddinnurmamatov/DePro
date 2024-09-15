@@ -21,11 +21,11 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   const { Header: HeaderComponent, Footer: FooterComponent } = useMemo(() => layoutComponents[device], [device]);
 
   return (
-    <div className="">
+    <>
       <HeaderComponent />
       <div className="min-h-[50vh] z-1 relative">{children}</div>
       <FooterComponent />
-    </div>
+    </>
   );
 };
 

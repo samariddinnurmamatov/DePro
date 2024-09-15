@@ -1,12 +1,12 @@
 {
   "hero": {
     "company_name": "DePro Kompaniyasi",
-    "it": "IT-Autsorsing Kompaniyasi",
-    "company_desc": "Agar biznesingiz vaqtinchalik bo'lishini, mijozlar ishonchini yo'qotishini istamasangiz, o'z veb-saytingizga ega bo'ling. Bu orqali ular sizni topishlari oson bo'ladi. Siz ishonchli brendga aylanasiz. Mijozlaringiz bilan muloqot yaxshilanadi.",
+    "it": "DePro IT-Outsourcing Kompaniyasi",
+    "company_desc": "Biznesingizni IT, mijozlarga xizmat ko'rsatish, dasturiy ta'minot ishlab chiqish va boshqalar sohalarda yuqori darajadagi outsourcing xizmatlari bilan qo'llab-quvvatlaymiz. Mutaxassislar jamoamiz uzluksiz integratsiya, xarajat samaradorligi va yuqori sifatli xizmatni taqdim etib, sizga o'sish va muvaffaqiyatga erishishga e'tibor qaratish imkonini beradi.",
     "contact": "Aloqa"
   },
   "nav": {
-    "home": "Asosiy",
+    "home": "Bosh sahifa",
     "about": "Biz haqimizda",
     "clients": "Mijozlar",
     "services": "Xizmatlar",
@@ -15,38 +15,45 @@
     "contact": "Aloqa"
   },
   "clients": {
-    "description": "O'zbekistonda va butun dunyo bo'ylab tezkor brendlar va agentliklar tomonidan ishonchli"
+    "description": "Bizning mijozlarimiz"
   },
   "services": {
-    "title": "Bizning Xizmatlarimiz",
+    "title": "Bizning xizmatlarimiz",
     "items": [
-      "Veb Dasturchi",
-      "React Native Dasturchi",
-      "Backend Dasturchi",
-      "Kontent Yaratuvchi",
-      "Kontent Yaratuvchi",
-      "Kontent Yaratuvchi"
+      "Dasturiy ta'minot ishlab chiqish",
+      "Veb-ishlanmalar",
+      "Mobil ilovalar ishlab chiqish",
+      "ERP tizimlarini ishlab chiqish va joriy etish",
+      "IT maslahatlari",
+      "Texnik xizmat va qo'llab-quvvatlash"
     ]
   },
   "tools": {
-    "title": "Asboblar"
+    "title": "Asboblar",
+    "all": "Hammasi",
+    "showMore": "Ko'proq ko'rsatish"
   },
   "contact": {
-    "getInTouch": "Aloqa uchun",
-    "contact": "Bog'lanish",
+    "getInTouch": "Biz bilan bog'laning",
+    "contact": "Aloqa",
     "labels": {
-      "name": "Ismingiz",
-      "email": "Elektron pochtangiz",
-      "message": "Telefon raqamingiz"
+      "name": "Ism",
+      "email": "Email",
+      "tel": "Telefon raqam",
+      "comment": "Izoh"
     },
     "placeholders": {
       "name": "Ismingiz nima?",
-      "email": "Elektron pochtangiz nima?",
-      "tel": "Telefon raqamingiz kiriting"
+      "email": "Emailingiz nima?",
+      "tel": "Telefon raqamingizni kiriting",
+      "comment": "Izohingizni kiriting"
     },
     "button": {
-      "sending": "Yuborilyapti...",
+      "sending": "Yuborilmoqda...",
       "sent": "Yuborildi"
     }
+  },
+  "footer": {
+    "protected": "© Barcha huquqlar himoyalangan 2024 - DePro ®"
   }
 }
