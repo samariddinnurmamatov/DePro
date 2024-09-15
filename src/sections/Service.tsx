@@ -1,10 +1,11 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { safer } from '@/utils/safer';
 import Image from 'next/image';
 import { ServiceItem } from '@/types';
 import Tilt from 'react-parallax-tilt';
-import CustomContainer from '@/components/ui/Container';
 import { useTranslation } from 'next-i18next';
+const CustomContainer = dynamic(() => import('@/components/ui/Container'));
 
 interface ServicesSectionProps {
     servicesItems: ServiceItem[];

@@ -1,8 +1,10 @@
 import { FC, useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import CustomContainer from '@/components/ui/Container';
 import { useTranslation } from 'next-i18next';
 import { safer } from '@/utils/safer';
+const CustomContainer = dynamic(() => import('@/components/ui/Container'));
+
 
 interface Tool {
   name: string;

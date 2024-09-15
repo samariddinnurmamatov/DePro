@@ -1,13 +1,14 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
-import CustomDropdown from "@/components/ui/Select/Select";
 import Logo3 from "@/assets/svg/1.svg";
 import Image from "next/image";
-import CustomContainer from "@/components/ui/Container";
+const CustomDropdown = dynamic(() => import('@/components/ui/Select/Select'));
+const CustomContainer = dynamic(() => import('@/components/ui/Container'));
 
 const language = {
   en: "English",

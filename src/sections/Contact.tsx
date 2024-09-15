@@ -1,8 +1,9 @@
+import dynamic from 'next/dynamic';
 import React, { useRef, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { safer } from '@/utils/safer';
-import CustomContainer from '@/components/ui/Container';
 import { toast } from 'react-toastify';
+const CustomContainer = dynamic(() => import('@/components/ui/Container'));
 
 const TELEGRAM_BOT_TOKEN = '7434955693:AAFKUX3LUcVB7NagJDxW35ShJ_eSfmlCnMs';
 const CHAT_ID = '-1002365682139';
