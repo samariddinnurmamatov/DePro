@@ -3,6 +3,7 @@
 import React, { useState, useRef, Suspense } from "react";
 import { Points, PointMaterial } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
+// @ts-ignore
 import * as THREE from "three"; // three.js import
 
 const StarBackground = (props: any) => {
