@@ -2,7 +2,7 @@
 const { i18n } = require("./next-i18next.config");
 
 const nextConfig = {
-  productionBrowserSourceMaps: false,
+  productionBrowserSourceMaps: true,
   reactStrictMode: false,
   swcMinify: true,
   i18n,
