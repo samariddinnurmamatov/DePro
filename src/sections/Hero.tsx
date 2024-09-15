@@ -18,7 +18,7 @@ const HeroSection: React.FC = () => {
   const { t } = useTranslation('common');
 
   return (
-    <div className="relative h-[auto] py-24 px-6 max-[600px]:px-2" id="home-section" aria-labelledby="hero-section-title">
+    <div className="relative h-[auto] py-28 px-6 max-[600px]:px-2" id="home-section" aria-labelledby="hero-section-title">
       <CustomContainer>
         <div className='flex gap-5 items-center justify-between px-3 max-[800px]:flex-col max-[800px]:gap-y-10 max-[800px]:items-start'>
           <div className='flex flex-col gap-4 items-start'>
