@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Creator: CorelDRAW -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="57.3076mm" height="65mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 4682.12 5310.6"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
- <defs>
-  <style type="text/css">
-   <![CDATA[
-    .fil1 {fill:#07689D}
-    .fil0 {fill:url(#id0)}
-   ]]>
-  </style>
-  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="713.1" y1="2031.03" x2="2150.55" y2="93.21">
-   <stop offset="0" style="stop-opacity:1; stop-color:#0D3145"/>
-   <stop offset="1" style="stop-opacity:1; stop-color:#07689D"/>
-  </linearGradient>
- </defs>
- <g id="Слой_x0020_1">
-  <metadata id="CorelCorpID_0Corel-Layer"/>
-  <path class="fil0" d="M739.42 2.3l-5.58 -2.3 -525.6 0c-112.12,0 -232.71,95.55 -203.91,203.9l173.96 654.32c28.8,108.35 91.74,203.9 203.9,203.9l357.23 0 0.77 0c32.16,0.25 1061.35,16.59 1061.35,1062.12l1062.12 0c0,0 0,-2124.24 -2124.24,-2124.24l0 2.3z"/>
-  <path class="fil1" d="M2859.75 4315.86l0 619 0 165.16c0,115.84 -94.74,210.58 -210.58,210.58l-640.97 0c-115.84,0 -210.58,-94.74 -210.58,-210.58l0 -165.16 0 -619 0 -1415.89 0 -489.34 0 -286.39 0 -1.53 0 -13 0.25 -0.7c4.93,-189.59 104.66,-2109.01 2123.99,-2109.01l0 2.3 5.59 -2.3 546.61 0c112.09,0 231.99,95.31 203.9,203.9l-169.25 654.32c-28.09,108.59 -91.75,203.9 -203.91,203.9l-382.94 0 -0.77 0c-32.16,0.25 -1061.35,16.59 -1061.35,1062.12l775.73 0c157.53,0 286.39,128.86 286.39,286.39l0 489.34c0,157.53 -128.86,286.39 -286.39,286.39l-775.73 0 0 1129.5z"/>
- </g>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="217px" height="246px" viewBox="0 0 217 245" version="1.1">
+<defs>
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="713.1" y1="2031.03" x2="2150.55" y2="93.21" gradientTransform="matrix(0.0463599,0,0,0.0461973,0,0.0000239582)">
+<stop offset="0" style="stop-color:rgb(5.098039%,19.215686%,27.058824%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(2.745098%,40.784314%,61.568627%);stop-opacity:1;"/>
+</linearGradient>
+</defs>
+<g id="surface1">
+<path style=" stroke:none;fill-rule:evenodd;fill:url(#linear0);" d="M 34.28125 0.105469 L 34.019531 0 L 9.652344 0 C 4.457031 0 -1.132812 4.414062 0.199219 9.417969 L 8.265625 39.648438 C 9.601562 44.652344 12.519531 49.066406 17.71875 49.066406 L 34.316406 49.066406 C 35.804688 49.078125 83.519531 49.832031 83.519531 98.132812 L 132.757812 98.132812 C 132.757812 98.132812 132.757812 0 34.28125 0 Z M 34.28125 0.105469 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(2.745098%,40.784314%,61.568627%);fill-opacity:1;" d="M 132.578125 199.382812 L 132.578125 235.605469 C 132.578125 240.957031 128.183594 245.335938 122.816406 245.335938 L 93.101562 245.335938 C 87.730469 245.335938 83.335938 240.957031 83.335938 235.605469 L 83.335938 97.464844 L 83.347656 97.429688 C 83.578125 88.671875 88.199219 0 181.816406 0 L 181.816406 0.105469 L 182.074219 0 L 207.417969 0 C 212.613281 0 218.171875 4.402344 216.871094 9.417969 L 209.023438 39.648438 C 207.722656 44.664062 204.769531 49.066406 199.570312 49.066406 L 181.78125 49.066406 C 180.289062 49.078125 132.578125 49.832031 132.578125 98.132812 L 168.539062 98.132812 C 175.84375 98.132812 181.816406 104.085938 181.816406 111.363281 L 181.816406 133.972656 C 181.816406 141.25 175.84375 147.203125 168.539062 147.203125 L 132.578125 147.203125 Z M 132.578125 199.382812 "/>
+</g>
 </svg>
