@@ -27,13 +27,21 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ servicesItems }) => {
                             tiltMaxAngleY={10}
                             transitionSpeed={500}
                         >
-                            <div className="bg-tertiary rounded-[15px] py-12 px-8 min-h-[230px] flex justify-between flex-col relative">
-                                <div className="w-10 h-10">
+                            <div 
+                                className="bg-tertiary rounded-[15px] py-12 px-8 flex justify-between flex-col relative"
+                                style={{ minHeight: '230px' }} // Установите минимальную высоту для стабильности
+                            >
+                                <div 
+                                    className="flex items-center justify-center"
+                                    style={{ width: '40px', height: '40px' }} // Фиксированные размеры для значков
+                                >
                                     <Image
                                         src={item.icon}
                                         alt={item.title}
-                                        layout="fixed"
-                                        className="object-contain w-10 h-10"
+                                        layout="fixed" // Использование фиксированного макета для избежания смещения
+                                        width={40} // Ширина изображения
+                                        height={40} // Высота изображения
+                                        className="object-contain"
                                         loading="lazy"
                                     />
                                 </div>

@@ -39,7 +39,7 @@ const HeroSection: React.FC = () => {
             </button>
           </div>
           <div>
-            <Image src={HomePageImage} width={600} height={100} alt='Right-Image' loading="lazy"/>
+            <Image src={HomePageImage} width={600} height={100} alt='Right-Image' loading="lazy" />
           </div>
         </div>
       </CustomContainer>
