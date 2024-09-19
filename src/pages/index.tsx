@@ -25,6 +25,7 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => ({
       servicesItems: serviceData,
       categoriesItems: toolData,
     },
+    revalidate: 60, 
   },
 });
 

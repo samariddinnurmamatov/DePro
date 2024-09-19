@@ -5,7 +5,7 @@ import { safer } from '@/utils/safer';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 const CustomContainer = dynamic(() => import('@/components/ui/Container'));
-const StarsCanvas = dynamic(() => import('@/components/canvas/StarsCanvas'));
+const StarsCanvas = dynamic(() => import('@/components/canvas/StarsCanvas'), {ssr: false},);
 
 const handleScrollToContact = () => {
   const contactSection = document.getElementById("contact-section");
